@@ -6,6 +6,7 @@ import com.example.atmversion2.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.xml.bind.JAXBException;
 import java.util.List;
 
 
@@ -29,4 +30,7 @@ public class AccountServiceImpl implements AccountService {
     public List<?> findByAccountNumber(String accountNumber) {
         return accountDAO.findByAccountNumber(accountNumber);
     }
+
+
+
 }

@@ -48,6 +48,7 @@ public class WebConfig extends WebSecurityConfigurerAdapter {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
         http.authorizeRequests().antMatchers("/login/**").permitAll();
+        http.authorizeRequests().antMatchers("/api/account/test/**").permitAll();
         http.authorizeRequests().antMatchers(HttpMethod.GET, "/api/**").hasAnyAuthority("USER");
 
         http.formLogin().permitAll();

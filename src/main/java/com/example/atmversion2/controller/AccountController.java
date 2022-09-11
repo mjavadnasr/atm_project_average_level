@@ -3,16 +3,15 @@ package com.example.atmversion2.controller;
 
 import com.example.atmversion2.entity.Account;
 import com.example.atmversion2.entity.Person;
+import com.example.atmversion2.service.impl.AccountServiceImpl;
 import com.example.atmversion2.service.impl.PersonServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.util.List;
 
@@ -22,6 +21,10 @@ public class AccountController {
 
     @Autowired
     private PersonServiceImpl personService;
+
+    @Autowired
+    private AccountServiceImpl accountService;
+
 
 
     @GetMapping("/remain")
